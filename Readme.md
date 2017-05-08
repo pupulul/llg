@@ -3,7 +3,7 @@
 宽度：450 150  
 厚度：180 60
 
-##UPDATE TIMELINE
+UPDATE TIMELINE
 >2017.5.8
 >
 >1. 添加文字介绍，阴影。
