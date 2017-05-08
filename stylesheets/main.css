@@ -1,0 +1,197 @@
+body{
+    background-color: lightyellow;
+}
+.text{
+    width:80%;
+    height:100%;
+    background-color: yellow;
+    color:black;
+    position:relative;
+    margin:auto;
+    box-shadow:5px 5px 5px 5px #000;
+}
+.buy{
+    position:fixed;
+    right:0;
+    top:0;
+}
+.buy div{
+    background-color: red;
+}
+.show{
+    width:300px;
+    height:100%;
+    position:fixed;
+    top:-10%;
+    left:33%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.cube {
+    /*设定容器宽度，保持屏幕居中*/
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    /*top: 50%;*/
+    left: 50%;
+    /*margin-top: -250px;*/
+    margin-left: -250px;
+}
+
+.cube div {
+    /*设定每一个div的大小，并让他们保持在中间。*/
+    /*  width: 100px;
+    height: 100px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    opacity:1;
+    background-position: center;
+    background-size: cover;
+}
+
+.side1 {
+    width: 60px;
+    height: 150px;
+    background-image: url(../img/imgTop.png);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.side2 {
+    width: 60px;
+    height: 150px;
+    background-image: url(../img/imgBottom.png);
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+.side3 {
+    width: 150px;
+    height: 200px;
+    background-image: url(../img/imgBack.png);
+    transform: rotateY(90deg) translateZ(-75px) translateY(-25px);
+}
+
+.side4 {
+    width: 150px;
+    height: 200px;
+    background-image: url(../img/imgFront.png);
+    transform: rotateY(90deg) translateZ(-15px) translateY(-25px);
+}
+
+.side5 {
+    width: 60px;
+    height: 200px;
+    background-image: url(../img/imgLeft.png);
+    transform: translateZ(-75px) translateY(-25px);
+}
+
+.side6 {
+    width: 60px;
+    height: 200px;
+    background-image: url(../img/imgRight.png);  
+    transform: translateZ(75px) translateY(-25px);
+}
+
+.m3d {
+    transform-style: preserve-3d;
+}
+
+
+/*沿Z轴旋转*/
+
+@keyframes moveOnZ {
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(-360deg);
+    }
+    25% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(-270deg);
+    }
+    50% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(-180deg);
+    }
+    75% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(-90deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+    }
+}
+
+
+/*沿X轴旋转*/
+
+@keyframes moveOnX {
+    0% {
+        transform: rotateX(45deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    25% {
+        transform: rotateX(-45deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(-135deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    75% {
+        transform: rotateX(-225deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-315deg) rotateY(-90deg) rotateZ(0deg);
+    }
+}
+
+
+/*沿Y轴旋转*/
+
+@keyframes moveOnY {
+    0% {
+        transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    }
+    25% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(45deg) rotateY(-135deg) rotateZ(0deg);
+    }
+    75% {
+        transform: rotateX(45deg) rotateY(-225deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(-315deg) rotateZ(0deg);
+    }
+}
+
+.moveX {
+    /*动画名称，一次多长时间*/
+    animation-name: moveOnX;
+    animation-duration: 5s;
+    /*动画播放次数，infinite是无限*/
+    animation-iteration-count: infinite;
+}
+
+.moveY {
+    /*动画名称，一次多长时间*/
+    animation-name: moveOnY;
+    animation-duration: 5s;
+    /*动画播放次数，infinite是无限*/
+    animation-iteration-count: infinite;
+}
+
+.moveZ {
+    /*动画名称，一次多长时间*/
+    animation-name: moveOnZ;
+    animation-duration: 5s;
+    /*动画播放次数，infinite是无限*/
+    animation-iteration-count: infinite;
+}
+
+.btn {
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
