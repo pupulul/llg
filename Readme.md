@@ -9,4 +9,5 @@ UPDATE TIMELINE
 >1. 添加文字介绍，阴影。
 >2. 增加点击跳转微店和点击显示图片功能。
 >3. 修改逻辑，改为监听和switch。
+
 > https://pupulul.github.io/llg/
